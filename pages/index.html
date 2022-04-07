@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Index Page</title>
+    <style>
+        li{
+            padding-left:15px;
+            padding-right:15px;
+        }
+        div.a{
+            position:-webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        #c{
+            list-style: none;
+            padding-top: 5px;
+        }
+        #c li a{
+            text-decoration: none;
+            color: wheat;
+        }
+        #f{
+            color: white;
+        }
+        /* Header Section */
+.intro {
+	display: table;
+	width: 100%;
+	padding: 0;
+	background: url('') center center no-repeat;
+	background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.intro .overlay {
+	background: rgba(0,0,0,0.4);
+}
+.intro h1 {
+	font-family: 'Rochester', cursive;
+	color: #fff;
+	font-size: 10em;
+	font-weight: 400;
+	margin-top: 0;
+}
+.intro span {
+	color: #a7c44c;
+	font-weight: 600;
+}
+.intro p {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 150px;
+}
+header .intro-text {
+	padding-top: 70px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+#about {
+	padding: 0;
+	background: #f6f6f6;
+}
+#about h2::after {
+	bottom: 0;
+	margin-left: 0;
+	left: 0;
+}
+#about .about-text {
+	padding: 80px 0;
+}
+#about .about-img {
+	background: #444 url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60') center center no-repeat;
+	background-size: cover;
+	height: 570px;
+}
+#about p {
+	line-height: 24px;
+	margin: 15px 0 30px;
+}
+.section-title {
+	margin-bottom: 70px;
+}
+.section-title .overlay {
+	padding: 80px 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+.section-title p {
+	font-size: 22px;
+}
+.section-title hr {
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+#contact {
+	padding: 100px 0;
+	background: #333;
+}
+#contact .contact-item p {
+	font-size: 15px;
+	color: #777;
+}
+#contact .section-title {
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+#contact form {
+	padding: 0;
+}
+#contact h3 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+	color: #aaa;
+	padding: 20px 0;
+}
+#contact h3::after {
+	position: absolute;
+	content: "";
+	background: #d43031;
+	height: 2px;
+	width: 40px;
+	bottom: 0;
+	margin-left: -20px;
+	left: 50%;
+}
+#contact .text-danger {
+	color: #cc0033;
+	text-align: left;
+}
+label {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	float: left;
+}
+#contact .form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #ccc;
+	background-color: rgba(255,255,255,.2);
+	background-image: none;
+	border: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+#contact .form-control:focus {
+	border-color: #999;
+	outline: 0;
+	-webkit-box-shadow: transparent;
+	box-shadow: transparent;
+}
+.form-control::-webkit-input-placeholder {
+color: #999;
+}
+.form-control:-moz-placeholder {
+color: #999;
+}
+.form-control::-moz-placeholder {
+color: #999;
+}
+.form-control:-ms-input-placeholder {
+color: #999;
+}
+#contact .contact-item {
+	margin: 20px 0 40px 0;
+}
+#contact .contact-item span {
+	font-weight: 400;
+	color: #aaa;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	display: inline-block;
+}
+    </style>
+</head>
+<body>
+    <div class="a"> 
+       
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+        <div class="container-fluid a">
+            <a class="navbar-brand" href="/"><i class="bi bi-egg-fried"></i> FoodiEpicure </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item" >
+                    <a class="nav-link" href="/"><i class="bi bi-house-door-fill"></i>  Home</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="/login"><i class="bi bi-person-check-fill"></i>  Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reg"><i class="bi bi-person-plus-fill"></i>   Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/m"><i class="bi bi-briefcase-fill"></i> Business</a>
+                </li>
+            </ul>
+            
+        </div>
+        </div>
+        </nav>
+    </div>
+    <!-- Header -->
+    <div class="container-fluid">
+        <div class="row">
+            <header id="header">
+                <div class="intro " >
+                <div class="overlay">
+                    <div class="container" >
+                    <div class="row">
+                        <div class="intro-text">
+                        <h1 ><i class="bi bi-egg-fried"></i> FoodiEpicure </h1>
+                        <p></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col" style="height: 200px;"></div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 about-img"> </div>
+            <div class="col-xs-12 col-md-3 col-md-offset-1">
+              <div class="about-text">
+                <div class="section-title">
+                  <h2 class="section-title">Our Story</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col" style="height: 200px;"></div>
+        </div>
+    </div>
+    <div id="contact" class="text-center">
+        <div class="container">
+          <div class="section-title text-center">
+            <h3>Send us a message</h3>
+          </div>
+          <div class="col-md-6 col-md-offset-3" style="align-items: center;">
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div id="success"></div>
+              <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    
+  
+</body>
+</html>

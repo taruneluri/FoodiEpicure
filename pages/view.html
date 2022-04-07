@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>View Page</title>
+    <style>
+      div.a{
+            position:-webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        #restaurant-menu {
+	padding: 100px 0 60px 0;
+}
+#restaurant-menu img {
+	width: 300px;
+	box-shadow: 15px 0 #a7c44c;
+}
+#restaurant-menu h3 {
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+#restaurant-menu .menu-section hr {
+	margin: 0 auto;
+}
+#restaurant-menu .menu-section {
+	margin: 0 20px 80px;
+}
+#restaurant-menu .menu-section-title {
+	font-size: 32px;
+	display: block;
+	font-weight: 400;
+	color: #444;
+	margin: 20px 0;
+	text-align: center;
+}
+#restaurant-menu .menu-item {
+	margin: 45px 0;
+	font-size: 18px;
+}
+#restaurant-menu .menu-item-name {
+	font-weight: 400;
+	font-size: 20px;
+	color: #444;
+	margin-bottom: 10px;
+}
+#restaurant-menu .menu-item-description {
+	font-size: 15px;
+	width: 85%;
+}
+#restaurant-menu .menu-item-price {
+	float: right;
+	font-weight: 400;
+	color: #555;
+	margin-top: -36px;
+}
+    </style>
+</head>
+<body>
+    <div class="a">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/dasboard"><i class="bi bi-egg-fried"></i> FoodiEpicure</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard"><i class="bi bi-house-fill"></i> Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/cart"><i class="bi bi-cart4"></i> Cart </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="uorders"><i class="bi bi-bag-check-fill"></i> Orders </a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <form action="/addcart" method="post">
+      <div id="restaurant-menu">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Menu</h2>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 offset-md-3" >
+              <div class="menu-section "  >
+                <!-- <h2 class="menu-section-title">Breakfast & Starters</h2> -->
+                <div class="menu-item" style="display: none;" id="m0">
+                  <div class="menu-item-name"> <span id="recipiename0"></span></div>
+                  <div class="menu-item-price"> <span id="fprice0"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc0"></span> </div><br>
+                  <a href="/add/0" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m1">
+                  <div class="menu-item-name"> <span id="recipiename1"></span></div>
+                  <div class="menu-item-price"> <span id="fprice1"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc1"></span> </div><br>
+                  <a href="/add/1" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m2">
+                  <div class="menu-item-name"><span id="recipiename2"></span></div>
+                  <div class="menu-item-price"> <span id="fprice2"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc2"></span> </div><br>
+                  <a href="/add/2" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m3">
+                  <div class="menu-item-name"> <span id="recipiename3"></span></div>
+                  <div class="menu-item-price"> <span id="fprice3"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc3"></span> </div><br>
+                  <a href="/add/3" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m4">
+                  <div class="menu-item-name"> <span id="recipiename4"></span></div>
+                  <div class="menu-item-price"> <span id="fprice4"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc4"></span> </div><br>
+                  <a href="/add/4" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m5">
+                  <div class="menu-item-name"> <span id="recipiename5"></span></div>
+                  <div class="menu-item-price"> <span id="fprice5"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc5"></span> </div><br>
+                  <a href="/add/5" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m6">
+                  <div class="menu-item-name"> <span id="recipiename6"></span></div>
+                  <div class="menu-item-price"> <span id="fprice6"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc6"></span> </div><br>
+                  <a href="/add/6" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m7">
+                  <div class="menu-item-name"> <span id="recipiename7"></span></div>
+                  <div class="menu-item-price"> <span id="fprice7"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc7"></span> </div><br>
+                  <a href="/add/7" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m8">
+                  <div class="menu-item-name"><span id="recipiename8"></span></div>
+                  <div class="menu-item-price"> <span id="fprice8"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc8"></span> </div><br>
+                  <a href="/add/8" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m9">
+                  <div class="menu-item-name"> <span id="recipiename9"></span></div>
+                  <div class="menu-item-price"> <span id="fprice9"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc9"></span> </div><br>
+                  <a href="/add/9" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m10">
+                  <div class="menu-item-name"><span id="recipiename10"></span></div>
+                  <div class="menu-item-price"> <span id="fprice10"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc10"></span> </div><br>
+                  <a href="/add/10" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m11">
+                  <div class="menu-item-name"><span id="recipiename11"></span></div>
+                  <div class="menu-item-price"> <span id="fprice11"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc11"></span> </div><br>
+                  <a href="/add/11" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m12">
+                  <div class="menu-item-name"> <span id="recipiename12"></span></div>
+                  <div class="menu-item-price"> <span id="fprice12"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc12"></span> </div><br>
+                  <a href="/add/12" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m13">
+                  <div class="menu-item-name"> <span id="recipiename13"></span></div>
+                  <div class="menu-item-price"> <span id="fprice13"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc13"></span> </div><br>
+                  <a href="/add/13" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m14">
+                  <div class="menu-item-name"> <span id="recipiename14"></span></div>
+                  <div class="menu-item-price"> <span id="fprice14"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc14"></span> </div><br>
+                  <a href="/add/14" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m15">
+                  <div class="menu-item-name"> <span id="recipiename15"></span></div>
+                  <div class="menu-item-price"> <span id="fprice15"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc15"></span> </div><br>
+                  <a href="/add/15" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m16">
+                  <div class="menu-item-name"><span id="recipiename16"></span></div>
+                  <div class="menu-item-price"> <span id="fprice16"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc16"></span> </div><br>
+                  <a href="/add/16" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m17">
+                  <div class="menu-item-name"><span id="recipiename17"></span></div>
+                  <div class="menu-item-price"> <span id="fprice17"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc17"></span> </div><br>
+                  <a href="/add/17" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m18">
+                  <div class="menu-item-name"> <span id="recipiename18"></span></div>
+                  <div class="menu-item-price"> <span id="fprice18"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc18"></span> </div><br>
+                  <a href="/add/18" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m19">
+                  <div class="menu-item-name"> <span id="recipiename19"></span></div>
+                  <div class="menu-item-price"> <span id="fprice19"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc19"></span> </div><br>
+                  <a href="/add/19" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="m20">
+                  <div class="menu-item-name"> <span id="recipiename20"></span></div>
+                  <div class="menu-item-price"> <span id="fprice20"></span> /-</div>
+                  <div class="menu-item-description"> <span id="fdesc20"></span> </div><br>
+                  <a href="/add/20" class="btn btn-primary menu-item-price">add to cart</a>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+
+      </form>
+      </div>
+      <div style="height: 100px;">
+      </div>
+</body>
+<script>
+  var xhttp=new XMLHttpRequest();
+  xhttp.open('GET',"/fetchmenutoview",true);
+  
+  xhttp.onload=function()
+  {
+      var data = JSON.parse(this.responseText);
+      for(var i=0;i<data.length;i++)
+      {
+          document.getElementById('m'+i).style.display="block";
+          document.getElementById('recipiename'+i).innerHTML=data[i].mname;
+          document.getElementById('fprice'+i).innerHTML=data[i].mprice;
+          document.getElementById('fdesc'+i).innerHTML=data[i].mdesc;
+      }
+  }
+  
+  xhttp.send();
+</script>
+</html>

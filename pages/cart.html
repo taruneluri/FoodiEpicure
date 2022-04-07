@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Cart Page</title>
+    <style>
+      div.a{
+            position:-webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+                #restaurant-menu {
+	padding: 100px 0 60px 0;
+}
+#restaurant-menu img {
+	width: 300px;
+	box-shadow: 15px 0 #a7c44c;
+}
+#restaurant-menu h3 {
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+#restaurant-menu .menu-section hr {
+	margin: 0 auto;
+}
+#restaurant-menu .menu-section {
+	margin: 0 20px 80px;
+}
+#restaurant-menu .menu-section-title {
+	font-size: 32px;
+	display: block;
+	font-weight: 400;
+	color: #444;
+	margin: 20px 0;
+	text-align: center;
+}
+#restaurant-menu .menu-item {
+	margin: 45px 0;
+	font-size: 18px;
+}
+#restaurant-menu .menu-item-name {
+	font-weight: 400;
+	font-size: 20px;
+	color: #444;
+	margin-bottom: 10px;
+}
+#restaurant-menu .menu-item-description {
+	font-size: 15px;
+	width: 85%;
+}
+#restaurant-menu .menu-item-price {
+	float: right;
+	font-weight: 400;
+	color: #555;
+	margin-top: -36px;
+}
+    </style>
+</head>
+<body>
+    <div class="a">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/dasboard"><i class="bi bi-egg-fried"></i> FoodiEpicure</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard"><i class="bi bi-house-fill"></i> Home </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/uorders"><i class="bi bi-bag-check-fill"></i> Orders </a>
+              </li>  
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </div>
+
+      <!-- start -->
+
+      <div id="restaurant-menu">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Cart</h2>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 offset-md-3" >
+              <div class="menu-section "  >
+                <h2 class="menu-section-title">Items in Cart</h2>
+                <div class="menu-item" style="display: none;" id="i0">
+                  <div class="menu-item-name"> <span id="iname0"></span></div>
+                  <div class="menu-item-description"> <span id="iprice0"></span> /-</div>
+                  <a href="/cartdelete/0" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i1">
+                  <div class="menu-item-name"> <span id="iname1"></span></div>
+                  <div class="menu-item-description"> <span id="iprice1"></span> /-</div>
+                  <a href="/cartdelete/1" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i2">
+                  <div class="menu-item-name"> <span id="iname2"></span></div>
+                  <div class="menu-item-description"> <span id="iprice2"></span> /-</div>
+                  <a href="/cartdelete/2" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i3">
+                  <div class="menu-item-name"> <span id="iname3"></span></div>
+                  <div class="menu-item-description"> <span id="iprice3"></span> /-</div>
+                  <a href="/cartdelete/3" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i4">
+                  <div class="menu-item-name"> <span id="iname4"></span></div>
+                  <div class="menu-item-description"> <span id="iprice4"></span> /-</div>
+                  <a href="/cartdelete/4" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i5">
+                  <div class="menu-item-name"> <span id="iname5"></span></div>
+                  <div class="menu-item-description"> <span id="iprice5"></span> /-</div>
+                  <a href="/cartdelete/5" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i6">
+                  <div class="menu-item-name"> <span id="iname6"></span></div>
+                  <div class="menu-item-description"> <span id="iprice6"></span> /-</div>
+                  <a href="/cartdelete/6" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i7">
+                  <div class="menu-item-name"> <span id="iname7"></span></div>
+                  <div class="menu-item-description"> <span id="iprice7"></span> /-</div>
+                  <a href="/cartdelete/7" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i8">
+                  <div class="menu-item-name"> <span id="iname8"></span></div>
+                  <div class="menu-item-description"> <span id="iprice8"></span> /-</div>
+                  <a href="/cartdelete/8" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i9">
+                  <div class="menu-item-name"> <span id="iname9"></span></div>
+                  <div class="menu-item-description"> <span id="iprice9"></span> /-</div>
+                  <a href="/cartdelete/9" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i10">
+                  <div class="menu-item-name"> <span id="iname10"></span></div>
+                  <div class="menu-item-description"> <span id="iprice10"></span> /-</div>
+                  <a href="/cartdelete/10" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i11">
+                  <div class="menu-item-name"> <span id="iname11"></span></div>
+                  <div class="menu-item-description"> <span id="iprice11"></span> /-</div>
+                  <a href="/cartdelete/11" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i12">
+                  <div class="menu-item-name"> <span id="iname12"></span></div>
+                  <div class="menu-item-description"> <span id="iprice12"></span> /-</div>
+                  <a href="/cartdelete/12" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i13">
+                  <div class="menu-item-name"> <span id="iname13"></span></div>
+                  <div class="menu-item-description"> <span id="iprice13"></span> /-</div>
+                  <a href="/cartdelete/13" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i14">
+                  <div class="menu-item-name"> <span id="iname14"></span></div>
+                  <div class="menu-item-description"> <span id="iprice14"></span> /-</div>
+                  <a href="/cartdelete/14" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i15">
+                  <div class="menu-item-name"> <span id="iname15"></span></div>
+                  <div class="menu-item-description"> <span id="iprice15"></span> /-</div>
+                  <a href="/cartdelete/15" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i16">
+                  <div class="menu-item-name"> <span id="iname16"></span></div>
+                  <div class="menu-item-description"> <span id="iprice16"></span> /-</div>
+                  <a href="/cartdelete/16" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i17">
+                  <div class="menu-item-name"> <span id="iname17"></span></div>
+                  <div class="menu-item-description"> <span id="iprice17"></span> /-</div>
+                  <a href="/cartdelete/17" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i18">
+                  <div class="menu-item-name"> <span id="iname18"></span></div>
+                  <div class="menu-item-description"> <span id="iprice18"></span> /-</div>
+                  <a href="/cartdelete/18" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i19">
+                  <div class="menu-item-name"> <span id="iname19"></span></div>
+                  <div class="menu-item-description"> <span id="iprice19"></span> /-</div>
+                  <a href="/cartdelete/19" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i20">
+                  <div class="menu-item-name"> <span id="iname20"></span></div>
+                  <div class="menu-item-description"> <span id="iprice20"></span> /-</div>
+                  <a href="/cartdelete/20" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i21">
+                  <div class="menu-item-name"> <span id="iname21"></span></div>
+                  <div class="menu-item-description"> <span id="iprice21"></span> /-</div>
+                  <a href="/cartdelete/21" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i22">
+                  <div class="menu-item-name"> <span id="iname22"></span></div>
+                  <div class="menu-item-description"> <span id="iprice22"></span> /-</div>
+                  <a href="/cartdelete/22" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i23">
+                  <div class="menu-item-name"> <span id="iname23"></span></div>
+                  <div class="menu-item-description"> <span id="iprice23"></span> /-</div>
+                  <a href="/cartdelete/23" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i24">
+                  <div class="menu-item-name"> <span id="iname24"></span></div>
+                  <div class="menu-item-description"> <span id="iprice24"></span> /-</div>
+                  <a href="/cartdelete/24" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i25">
+                  <div class="menu-item-name"> <span id="iname25"></span></div>
+                  <div class="menu-item-description"> <span id="iprice25"></span> /-</div>
+                  <a href="/cartdelete/25" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i26">
+                  <div class="menu-item-name"> <span id="iname26"></span></div>
+                  <div class="menu-item-description"> <span id="iprice26"></span> /-</div>
+                  <a href="/cartdelete/26" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <div class="menu-item" style="display: none;" id="i27">
+                  <div class="menu-item-name"> <span id="iname27"></span></div>
+                  <div class="menu-item-description"> <span id="iprice27"></span> /-</div>
+                  <a href="/cartdelete/27" class="btn btn-primary menu-item-price">Delete</a>
+                </div>
+                <h2 class="menu-section-title">Total Bill : <span id="total"></span> /-</h2>
+              </div>
+              <div  style="display: none;" id="an0">
+                <form action="/placeorder" method="post">
+                  <div class="mb-3 mt-3">
+                    <label  class="form-label">Address to deliver :</label>
+                    <input type="text" class="form-control"  placeholder="Enter Location" name="dloc" style="height: 100px;text-align: center;">
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <button class="btn btn-primary" type="submit">Place Order</button>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      <!-- stop -->
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12 col-sm-6 offset-md-3">
+                                
+                  <a href="/placeorder" style="display: none;" id="an0"><button class="btn btn-primary">Place Order</button></a>
+              </div>
+          </div>
+      </div>
+</body>
+<script>
+  var xhttp=new XMLHttpRequest();
+  xhttp.open('GET',"/getcartinfo",true);
+  
+  xhttp.onload=function()
+  {
+      var total=0;
+      var data = JSON.parse(this.responseText);
+      for(var i=0;i<data.length;i++)
+      {
+        total=total+data[i].iprice;
+        document.getElementById('an0').style.display="block";
+        document.getElementById('i'+i).style.display="block";
+        document.getElementById('iname'+i).innerHTML=data[i].iname;
+        document.getElementById('iprice'+i).innerHTML=data[i].iprice;
+        document.getElementById('total').innerHTML=total;
+      }
+      
+  }
+  
+  xhttp.send();
+</script>
+</html>

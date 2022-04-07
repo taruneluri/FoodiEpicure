@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManagerIndex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+      #restaurant-menu {
+padding: 100px 0 60px 0;
+}
+#restaurant-menu img {
+width: 300px;
+box-shadow: 15px 0 #a7c44c;
+}
+#restaurant-menu h3 {
+padding: 10px 0;
+text-transform: uppercase;
+}
+#restaurant-menu .menu-section hr {
+margin: 0 auto;
+}
+#restaurant-menu .menu-section {
+margin: 0 20px 80px;
+}
+#restaurant-menu .menu-section-title {
+font-size: 32px;
+display: block;
+font-weight: 400;
+color: #444;
+margin: 20px 0;
+text-align: center;
+}
+#restaurant-menu .menu-item {
+margin: 45px 0;
+font-size: 18px;
+}
+#restaurant-menu .menu-item-name {
+font-weight: 400;
+font-size: 20px;
+color: #444;
+margin-bottom: 10px;
+}
+#restaurant-menu .menu-item-description {
+font-size: 15px;
+width: 85%;
+}
+#restaurant-menu .menu-item-price {
+float: right;
+font-weight: 400;
+color: #555;
+margin-top: -36px;
+}
+
+  </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="a">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/mdashboard"><i class="bi bi-egg-fried"></i> FoodiEpicure  Business</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/mdashboard"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mratings"><i class="bi bi-box-arrow-in-right"></i> Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/addmenu"><i class="bi bi-plus-circle"></i> Add Menu</a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <!-- start -->
+  <div id="restaurant-menu">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Orders</h2>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 offset-md-3" >
+          <div class="menu-section "  >
+            <!-- <h2 class="menu-section-title">Breakfast & Starters</h2> -->
+            <div class="menu-item" style="display: none;" id="o0">
+              <div class="menu-item-name"> <span id="cname0"></span></div>
+              <div class="menu-item-price"> <span id="iname0"></span></div>
+              <div class="menu-item-description"> <span id="cno0"></span></div>
+              <div class="menu-item-description"> <span id="clo0"></span> </div>
+              <a href="/doneorder/0" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o1">
+              <div class="menu-item-name"> <span id="cname1"></span></div>
+              <div class="menu-item-price"> <span id="iname1"></span></div>
+              <div class="menu-item-description"> <span id="cno1"></span></div>
+              <div class="menu-item-description"> <span id="clo1"></span> </div>
+              <a href="/doneorder/1" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o2">
+              <div class="menu-item-name"> <span id="cname2"></span></div>
+              <div class="menu-item-price"> <span id="iname2"></span></div>
+              <div class="menu-item-description"> <span id="cno2"></span></div>
+              <div class="menu-item-description"> <span id="clo2"></span> </div>
+              <a href="/doneorder/2" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o3">
+              <div class="menu-item-name"> <span id="cname3"></span></div>
+              <div class="menu-item-price"> <span id="iname3"></span></div>
+              <div class="menu-item-description"> <span id="cno3"></span></div>
+              <div class="menu-item-description"> <span id="clo3"></span> </div>
+              <a href="/doneorder/3" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o4">
+              <div class="menu-item-name"> <span id="cname4"></span></div>
+              <div class="menu-item-price"> <span id="iname4"></span></div>
+              <div class="menu-item-description"> <span id="cno4"></span></div>
+              <div class="menu-item-description"> <span id="clo4"></span> </div>
+              <a href="/doneorder/4" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o5">
+              <div class="menu-item-name"> <span id="cname5"></span></div>
+              <div class="menu-item-price"> <span id="iname5"></span></div>
+              <div class="menu-item-description"> <span id="cno5"></span></div>
+              <div class="menu-item-description"> <span id="clo5"></span> </div>
+              <a href="/doneorder/5" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o6">
+              <div class="menu-item-name"> <span id="cname6"></span></div>
+              <div class="menu-item-price"> <span id="iname6"></span></div>
+              <div class="menu-item-description"> <span id="cno6"></span></div>
+              <div class="menu-item-description"> <span id="clo6"></span> </div>
+              <a href="/doneorder/6" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o7">
+              <div class="menu-item-name"> <span id="cname7"></span></div>
+              <div class="menu-item-price"> <span id="iname7"></span></div>
+              <div class="menu-item-description"> <span id="cno7"></span></div>
+              <div class="menu-item-description"> <span id="clo7"></span> </div>
+              <a href="/doneorder/7" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o8">
+              <div class="menu-item-name"> <span id="cname8"></span></div>
+              <div class="menu-item-price"> <span id="iname8"></span></div>
+              <div class="menu-item-description"> <span id="cno8"></span></div>
+              <div class="menu-item-description"> <span id="clo8"></span> </div>
+              <a href="/doneorder/8" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o9">
+              <div class="menu-item-name"> <span id="cname9"></span></div>
+              <div class="menu-item-price"> <span id="iname9"></span></div>
+              <div class="menu-item-description"> <span id="cno9"></span></div>
+              <div class="menu-item-description"> <span id="clo9"></span> </div>
+              <a href="/doneorder/9" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o10">
+              <div class="menu-item-name"> <span id="cname10"></span></div>
+              <div class="menu-item-price"> <span id="iname10"></span></div>
+              <div class="menu-item-description"> <span id="cno10"></span></div>
+              <div class="menu-item-description"> <span id="clo10"></span> </div>
+              <a href="/doneorder/10" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o11">
+              <div class="menu-item-name"> <span id="cname11"></span></div>
+              <div class="menu-item-price"> <span id="iname11"></span></div>
+              <div class="menu-item-description"> <span id="cno11"></span></div>
+              <div class="menu-item-description"> <span id="clo11"></span> </div>
+              <a href="/doneorder/11" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o12">
+              <div class="menu-item-name"> <span id="cname12"></span></div>
+              <div class="menu-item-price"> <span id="iname12"></span></div>
+              <div class="menu-item-description"> <span id="cno12"></span></div>
+              <div class="menu-item-description"> <span id="clo12"></span> </div>
+              <a href="/doneorder/12" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o13">
+              <div class="menu-item-name"> <span id="cname13"></span></div>
+              <div class="menu-item-price"> <span id="iname13"></span></div>
+              <div class="menu-item-description"> <span id="cno13"></span></div>
+              <div class="menu-item-description"> <span id="clo13"></span> </div>
+              <a href="/doneorder/13" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o14">
+              <div class="menu-item-name"> <span id="cname14"></span></div>
+              <div class="menu-item-price"> <span id="iname14"></span></div>
+              <div class="menu-item-description"> <span id="cno14"></span></div>
+              <div class="menu-item-description"> <span id="clo14"></span> </div>
+              <a href="/doneorder/14" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o15">
+              <div class="menu-item-name"> <span id="cname15"></span></div>
+              <div class="menu-item-price"> <span id="iname15"></span></div>
+              <div class="menu-item-description"> <span id="cno15"></span></div>
+              <div class="menu-item-description"> <span id="clo15"></span> </div>
+              <a href="/doneorder/15" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o16">
+              <div class="menu-item-name"> <span id="cname16"></span></div>
+              <div class="menu-item-price"> <span id="iname16"></span></div>
+              <div class="menu-item-description"> <span id="cno16"></span></div>
+              <div class="menu-item-description"> <span id="clo16"></span> </div>
+              <a href="/doneorder/16" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o17">
+              <div class="menu-item-name"> <span id="cname17"></span></div>
+              <div class="menu-item-price"> <span id="iname17"></span></div>
+              <div class="menu-item-description"> <span id="cno17"></span></div>
+              <div class="menu-item-description"> <span id="clo17"></span> </div>
+              <a href="/doneorder/17" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o18">
+              <div class="menu-item-name"> <span id="cname18"></span></div>
+              <div class="menu-item-price"> <span id="iname18"></span></div>
+              <div class="menu-item-description"> <span id="cno18"></span></div>
+              <div class="menu-item-description"> <span id="clo18"></span> </div>
+              <a href="/doneorder/18" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o19">
+              <div class="menu-item-name"> <span id="cname19"></span></div>
+              <div class="menu-item-price"> <span id="iname19"></span></div>
+              <div class="menu-item-description"> <span id="cno19"></span></div>
+              <div class="menu-item-description"> <span id="clo19"></span> </div>
+              <a href="/doneorder/19" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o20">
+              <div class="menu-item-name"> <span id="cname20"></span></div>
+              <div class="menu-item-price"> <span id="iname20"></span></div>
+              <div class="menu-item-description"> <span id="cno20"></span></div>
+              <div class="menu-item-description"> <span id="clo20"></span> </div>
+              <a href="/doneorder/20" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o21">
+              <div class="menu-item-name"> <span id="cname21"></span></div>
+              <div class="menu-item-price"> <span id="iname21"></span></div>
+              <div class="menu-item-description"> <span id="cno21"></span></div>
+              <div class="menu-item-description"> <span id="clo21"></span> </div>
+              <a href="/doneorder/21" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o22">
+              <div class="menu-item-name"> <span id="cname22"></span></div>
+              <div class="menu-item-price"> <span id="iname22"></span></div>
+              <div class="menu-item-description"> <span id="cno22"></span></div>
+              <div class="menu-item-description"> <span id="clo22"></span> </div>
+              <a href="/doneorder/22" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o23">
+              <div class="menu-item-name"> <span id="cname23"></span></div>
+              <div class="menu-item-price"> <span id="iname23"></span></div>
+              <div class="menu-item-description"> <span id="cno23"></span></div>
+              <div class="menu-item-description"> <span id="clo23"></span> </div>
+              <a href="/doneorder/23" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o24">
+              <div class="menu-item-name"> <span id="cname24"></span></div>
+              <div class="menu-item-price"> <span id="iname24"></span></div>
+              <div class="menu-item-description"> <span id="cno24"></span></div>
+              <div class="menu-item-description"> <span id="clo24"></span> </div>
+              <a href="/doneorder/24" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o25">
+              <div class="menu-item-name"> <span id="cname25"></span></div>
+              <div class="menu-item-price"> <span id="iname25"></span></div>
+              <div class="menu-item-description"> <span id="cno25"></span></div>
+              <div class="menu-item-description"> <span id="clo25"></span> </div>
+              <a href="/doneorder/25" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o26">
+              <div class="menu-item-name"> <span id="cname26"></span></div>
+              <div class="menu-item-price"> <span id="iname26"></span></div>
+              <div class="menu-item-description"> <span id="cno26"></span></div>
+              <div class="menu-item-description"> <span id="clo26"></span> </div>
+              <a href="/doneorder/26" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o27">
+              <div class="menu-item-name"> <span id="cname27"></span></div>
+              <div class="menu-item-price"> <span id="iname27"></span></div>
+              <div class="menu-item-description"> <span id="cno27"></span></div>
+              <div class="menu-item-description"> <span id="clo27"></span> </div>
+              <a href="/doneorder/27" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o28">
+              <div class="menu-item-name"> <span id="cname28"></span></div>
+              <div class="menu-item-price"> <span id="iname28"></span></div>
+              <div class="menu-item-description"> <span id="cno28"></span></div>
+              <div class="menu-item-description"> <span id="clo28"></span> </div>
+              <a href="/doneorder/28" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o29">
+              <div class="menu-item-name"> <span id="cname29"></span></div>
+              <div class="menu-item-price"> <span id="iname29"></span></div>
+              <div class="menu-item-description"> <span id="cno29"></span></div>
+              <div class="menu-item-description"> <span id="clo29"></span> </div>
+              <a href="/doneorder/29" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o30">
+              <div class="menu-item-name"> <span id="cname30"></span></div>
+              <div class="menu-item-price"> <span id="iname30"></span></div>
+              <div class="menu-item-description"> <span id="cno30"></span></div>
+              <div class="menu-item-description"> <span id="clo30"></span> </div>
+              <a href="/doneorder/30" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o31">
+              <div class="menu-item-name"> <span id="cname31"></span></div>
+              <div class="menu-item-price"> <span id="iname31"></span></div>
+              <div class="menu-item-description"> <span id="cno31"></span></div>
+              <div class="menu-item-description"> <span id="clo31"></span> </div>
+              <a href="/doneorder/31" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o32">
+              <div class="menu-item-name"> <span id="cname32"></span></div>
+              <div class="menu-item-price"> <span id="iname32"></span></div>
+              <div class="menu-item-description"> <span id="cno32"></span></div>
+              <div class="menu-item-description"> <span id="clo32"></span> </div>
+              <a href="/doneorder/32" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o33">
+              <div class="menu-item-name"> <span id="cname33"></span></div>
+              <div class="menu-item-price"> <span id="iname33"></span></div>
+              <div class="menu-item-description"> <span id="cno33"></span></div>
+              <div class="menu-item-description"> <span id="clo33"></span> </div>
+              <a href="/doneorder/33" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o34">
+              <div class="menu-item-name"> <span id="cname34"></span></div>
+              <div class="menu-item-price"> <span id="iname34"></span></div>
+              <div class="menu-item-description"> <span id="cno34"></span></div>
+              <div class="menu-item-description"> <span id="clo34"></span> </div>
+              <a href="/doneorder/34" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o35">
+              <div class="menu-item-name"> <span id="cname35"></span></div>
+              <div class="menu-item-price"> <span id="iname35"></span></div>
+              <div class="menu-item-description"> <span id="cno35"></span></div>
+              <div class="menu-item-description"> <span id="clo35"></span> </div>
+              <a href="/doneorder/35" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o36">
+              <div class="menu-item-name"> <span id="cname36"></span></div>
+              <div class="menu-item-price"> <span id="iname36"></span></div>
+              <div class="menu-item-description"> <span id="cno36"></span></div>
+              <div class="menu-item-description"> <span id="clo36"></span> </div>
+              <a href="/doneorder/36" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o37">
+              <div class="menu-item-name"> <span id="cname37"></span></div>
+              <div class="menu-item-price"> <span id="iname37"></span></div>
+              <div class="menu-item-description"> <span id="cno37"></span></div>
+              <div class="menu-item-description"> <span id="clo37"></span> </div>
+              <a href="/doneorder/37" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o38">
+              <div class="menu-item-name"> <span id="cname38"></span></div>
+              <div class="menu-item-price"> <span id="iname38"></span></div>
+              <div class="menu-item-description"> <span id="cno38"></span></div>
+              <div class="menu-item-description"> <span id="clo38"></span> </div>
+              <a href="/doneorder/38" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o39">
+              <div class="menu-item-name"> <span id="cname39"></span></div>
+              <div class="menu-item-price"> <span id="iname39"></span></div>
+              <div class="menu-item-description"> <span id="cno39"></span></div>
+              <div class="menu-item-description"> <span id="clo39"></span> </div>
+              <a href="/doneorder/39" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o40">
+              <div class="menu-item-name"> <span id="cname40"></span></div>
+              <div class="menu-item-price"> <span id="iname40"></span></div>
+              <div class="menu-item-description"> <span id="cno40"></span></div>
+              <div class="menu-item-description"> <span id="clo40"></span> </div>
+              <a href="/doneorder/40" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o41">
+              <div class="menu-item-name"> <span id="cname41"></span></div>
+              <div class="menu-item-price"> <span id="iname41"></span></div>
+              <div class="menu-item-description"> <span id="cno41"></span></div>
+              <div class="menu-item-description"> <span id="clo41"></span> </div>
+              <a href="/doneorder/41" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o42">
+              <div class="menu-item-name"> <span id="cname42"></span></div>
+              <div class="menu-item-price"> <span id="iname42"></span></div>
+              <div class="menu-item-description"> <span id="cno42"></span></div>
+              <div class="menu-item-description"> <span id="clo42"></span> </div>
+              <a href="/doneorder/42" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o43">
+              <div class="menu-item-name"> <span id="cname43"></span></div>
+              <div class="menu-item-price"> <span id="iname43"></span></div>
+              <div class="menu-item-description"> <span id="cno43"></span></div>
+              <div class="menu-item-description"> <span id="clo43"></span> </div>
+              <a href="/doneorder/43" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o44">
+              <div class="menu-item-name"> <span id="cname44"></span></div>
+              <div class="menu-item-price"> <span id="iname44"></span></div>
+              <div class="menu-item-description"> <span id="cno44"></span></div>
+              <div class="menu-item-description"> <span id="clo44"></span> </div>
+              <a href="/doneorder/44" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o45">
+              <div class="menu-item-name"> <span id="cname45"></span></div>
+              <div class="menu-item-price"> <span id="iname45"></span></div>
+              <div class="menu-item-description"> <span id="cno45"></span></div>
+              <div class="menu-item-description"> <span id="clo45"></span> </div>
+              <a href="/doneorder/45" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o46">
+              <div class="menu-item-name"> <span id="cname46"></span></div>
+              <div class="menu-item-price"> <span id="iname46"></span></div>
+              <div class="menu-item-description"> <span id="cno46"></span></div>
+              <div class="menu-item-description"> <span id="clo46"></span> </div>
+              <a href="/doneorder/46" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o47">
+              <div class="menu-item-name"> <span id="cname47"></span></div>
+              <div class="menu-item-price"> <span id="iname47"></span></div>
+              <div class="menu-item-description"> <span id="cno47"></span></div>
+              <div class="menu-item-description"> <span id="clo47"></span> </div>
+              <a href="/doneorder/47" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o48">
+              <div class="menu-item-name"> <span id="cname48"></span></div>
+              <div class="menu-item-price"> <span id="iname48"></span></div>
+              <div class="menu-item-description"> <span id="cno48"></span></div>
+              <div class="menu-item-description"> <span id="clo48"></span> </div>
+              <a href="/doneorder/48" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o49">
+              <div class="menu-item-name"> <span id="cname49"></span></div>
+              <div class="menu-item-price"> <span id="iname49"></span></div>
+              <div class="menu-item-description"> <span id="cno49"></span></div>
+              <div class="menu-item-description"> <span id="clo49"></span> </div>
+              <a href="/doneorder/49" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="o50">
+              <div class="menu-item-name"> <span id="cname50"></span></div>
+              <div class="menu-item-price"> <span id="iname50"></span></div>
+              <div class="menu-item-description"> <span id="cno50"></span></div>
+              <div class="menu-item-description"> <span id="clo50"></span> </div>
+              <a href="/doneorder/50" class="menu-item-price"><button class="btn btn-primary">Done</button></a>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+        </div>
+        </div> 
+  <!-- end -->
+  </body>
+<script>
+    var xhttp=new XMLHttpRequest();
+    xhttp.open('GET',"/mangorders",true);
+    
+    xhttp.onload=function()
+    {
+        var data = JSON.parse(this.responseText);
+        for(var i=0;i<data.length;i++)
+        {
+            document.getElementById('o'+i).style.display="block";
+            document.getElementById('iname'+i).innerHTML=data[i].iname;
+            document.getElementById('cname'+i).innerHTML=data[i].uname;
+            document.getElementById('cno'+i).innerHTML=data[i].uno;
+            document.getElementById('clo'+i).innerHTML=data[i].uadd;
+        }
+        
+    }
+    
+    xhttp.send();
+</script>
+</html>

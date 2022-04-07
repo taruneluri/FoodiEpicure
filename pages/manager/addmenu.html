@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManagerIndex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>#restaurant-menu {
+      padding: 100px 0 60px 0;
+    }
+    #restaurant-menu img {
+      width: 300px;
+      box-shadow: 15px 0 #a7c44c;
+    }
+    #restaurant-menu h3 {
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+    #restaurant-menu .menu-section hr {
+      margin: 0 auto;
+    }
+    #restaurant-menu .menu-section {
+      margin: 0 20px 80px;
+    }
+    #restaurant-menu .menu-section-title {
+      font-size: 32px;
+      display: block;
+      font-weight: 400;
+      color: #444;
+      margin: 20px 0;
+      text-align: center;
+    }
+    #restaurant-menu .menu-item {
+      margin: 45px 0;
+      font-size: 18px;
+    }
+    #restaurant-menu .menu-item-name {
+      font-weight: 400;
+      font-size: 20px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    #restaurant-menu .menu-item-description {
+      font-size: 15px;
+      width: 85%;
+    }
+    #restaurant-menu .menu-item-price {
+      float: right;
+      font-weight: 400;
+      color: #555;
+      margin-top: -36px;
+    }</style>
+</head>
+<body>
+    <!-- header -->
+    <div class="a">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><i class="bi bi-egg-fried"></i> FoodiEpicure  Business</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/mdashboard"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mratings"><i class="bi bi-box-arrow-in-right"></i> Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/vieworders"><i class="bi bi-plus-circle"></i> Orders</a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3 ">
+            <form action="/addmenu" method="post">
+                <div class="mb-3 mt-3">
+                  <label class="form-label">Item Name:</label>
+                  <input type="text" class="form-control" placeholder="Enter item name" name="mname">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label">Item category:</label>
+                    <input type="text" class="form-control" placeholder="Enter item category" name="mcat">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label">Item description:</label>
+                    <input type="text" class="form-control" placeholder="Enter item description" name="mdesc">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label">Item price:</label>
+                    <input type="number" class="form-control" placeholder="Enter item price" name="mprice">
+                  </div>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Add Item</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  <!-- start -->
+  <div id="restaurant-menu">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Menu</h2>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 offset-md-3" >
+          <div class="menu-section "  >
+            <h2 class="menu-section-title">Added Items</h2>
+            <div class="menu-item" style="display: none;" id="tr0">
+              <div class="menu-item-name"> <span id="mname0"></span></div>
+              <div class="menu-item-price"> <span id="mprice0"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc0"></span></div><br>
+              <a href="/deletemenu/0" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr1">
+              <div class="menu-item-name"> <span id="mname1"></span></div>
+              <div class="menu-item-price"> <span id="mprice1"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc1"></span></div><br>
+              <a href="/deletemenu/1" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr2">
+              <div class="menu-item-name"> <span id="mname2"></span></div>
+              <div class="menu-item-price"> <span id="mprice2"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc2"></span></div><br>
+              <a href="/deletemenu/2" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr3">
+              <div class="menu-item-name"> <span id="mname3"></span></div>
+              <div class="menu-item-price"> <span id="mprice3"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc3"></span></div><br>
+              <a href="/deletemenu/3" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr4">
+              <div class="menu-item-name"> <span id="mname4"></span></div>
+              <div class="menu-item-price"> <span id="mprice4"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc4"></span></div><br>
+              <a href="/deletemenu/4" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr5">
+              <div class="menu-item-name"> <span id="mname5"></span></div>
+              <div class="menu-item-price"> <span id="mprice5"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc5"></span></div><br>
+              <a href="/deletemenu/5" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr6">
+              <div class="menu-item-name"> <span id="mname6"></span></div>
+              <div class="menu-item-price"> <span id="mprice6"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc6"></span></div><br>
+              <a href="/deletemenu/6" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr7">
+              <div class="menu-item-name"> <span id="mname7"></span></div>
+              <div class="menu-item-price"> <span id="mprice7"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc7"></span></div><br>
+              <a href="/deletemenu/7" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr8">
+              <div class="menu-item-name"> <span id="mname8"></span></div>
+              <div class="menu-item-price"> <span id="mprice8"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc8"></span></div><br>
+              <a href="/deletemenu/8" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr9">
+              <div class="menu-item-name"> <span id="mname9"></span></div>
+              <div class="menu-item-price"> <span id="mprice9"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc9"></span></div><br>
+              <a href="/deletemenu/9" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr10">
+              <div class="menu-item-name"> <span id="mname10"></span></div>
+              <div class="menu-item-price"> <span id="mprice10"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc10"></span></div><br>
+              <a href="/deletemenu/10" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr11">
+              <div class="menu-item-name"> <span id="mname11"></span></div>
+              <div class="menu-item-price"> <span id="mprice11"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc11"></span></div><br>
+              <a href="/deletemenu/11" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr12">
+              <div class="menu-item-name"> <span id="mname12"></span></div>
+              <div class="menu-item-price"> <span id="mprice12"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc12"></span></div><br>
+              <a href="/deletemenu/12" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr13">
+              <div class="menu-item-name"> <span id="mname13"></span></div>
+              <div class="menu-item-price"> <span id="mprice13"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc13"></span></div><br>
+              <a href="/deletemenu/13" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr14">
+              <div class="menu-item-name"> <span id="mname14"></span></div>
+              <div class="menu-item-price"> <span id="mprice14"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc14"></span></div><br>
+              <a href="/deletemenu/14" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr15">
+              <div class="menu-item-name"> <span id="mname15"></span></div>
+              <div class="menu-item-price"> <span id="mprice15"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc15"></span></div><br>
+              <a href="/deletemenu/15" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr16">
+              <div class="menu-item-name"> <span id="mname16"></span></div>
+              <div class="menu-item-price"> <span id="mprice16"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc16"></span></div><br>
+              <a href="/deletemenu/16" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr17">
+              <div class="menu-item-name"> <span id="mname17"></span></div>
+              <div class="menu-item-price"> <span id="mprice17"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc17"></span></div><br>
+              <a href="/deletemenu/17" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr18">
+              <div class="menu-item-name"> <span id="mname18"></span></div>
+              <div class="menu-item-price"> <span id="mprice18"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc18"></span></div><br>
+              <a href="/deletemenu/18" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr19">
+              <div class="menu-item-name"> <span id="mname19"></span></div>
+              <div class="menu-item-price"> <span id="mprice19"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc19"></span></div><br>
+              <a href="/deletemenu/19" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr20">
+              <div class="menu-item-name"> <span id="mname20"></span></div>
+              <div class="menu-item-price"> <span id="mprice20"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc20"></span></div><br>
+              <a href="/deletemenu/20" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr21">
+              <div class="menu-item-name"> <span id="mname21"></span></div>
+              <div class="menu-item-price"> <span id="mprice21"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc21"></span></div><br>
+              <a href="/deletemenu/21" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr22">
+              <div class="menu-item-name"> <span id="mname22"></span></div>
+              <div class="menu-item-price"> <span id="mprice22"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc22"></span></div><br>
+              <a href="/deletemenu/22" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr23">
+              <div class="menu-item-name"> <span id="mname23"></span></div>
+              <div class="menu-item-price"> <span id="mprice23"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc23"></span></div><br>
+              <a href="/deletemenu/23" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr24">
+              <div class="menu-item-name"> <span id="mname24"></span></div>
+              <div class="menu-item-price"> <span id="mprice24"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc24"></span></div><br>
+              <a href="/deletemenu/24" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr25">
+              <div class="menu-item-name"> <span id="mname25"></span></div>
+              <div class="menu-item-price"> <span id="mprice25"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc25"></span></div><br>
+              <a href="/deletemenu/25" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr26">
+              <div class="menu-item-name"> <span id="mname26"></span></div>
+              <div class="menu-item-price"> <span id="mprice26"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc26"></span></div><br>
+              <a href="/deletemenu/26" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr27">
+              <div class="menu-item-name"> <span id="mname27"></span></div>
+              <div class="menu-item-price"> <span id="mprice27"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc27"></span></div><br>
+              <a href="/deletemenu/27" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr28">
+              <div class="menu-item-name"> <span id="mname28"></span></div>
+              <div class="menu-item-price"> <span id="mprice28"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc28"></span></div><br>
+              <a href="/deletemenu/28" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr29">
+              <div class="menu-item-name"> <span id="mname29"></span></div>
+              <div class="menu-item-price"> <span id="mprice29"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc29"></span></div><br>
+              <a href="/deletemenu/29" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr30">
+              <div class="menu-item-name"> <span id="mname30"></span></div>
+              <div class="menu-item-price"> <span id="mprice30"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc30"></span></div><br>
+              <a href="/deletemenu/30" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+            <div class="menu-item" style="display: none;" id="tr31">
+              <div class="menu-item-name"> <span id="mname31"></span></div>
+              <div class="menu-item-price"> <span id="mprice31"></span> /-</div>
+              <div class="menu-item-description"> <span id="mdesc31"></span></div><br>
+              <a href="/deletemenu/31" class="menu-item-price"><button class="btn btn-primary ">Delete</button></a>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- end -->
+</body>
+<script>
+    var xhttp=new XMLHttpRequest();
+    xhttp.open('GET',"/getaddedmenu",true);
+    
+    xhttp.onload=function()
+    {
+        var data = JSON.parse(this.responseText);
+        for(var i=0;i<data.length;i++)
+        {
+            document.getElementById('tr'+i).style.display="block";
+            document.getElementById('mname'+i).innerHTML=data[i].mname;
+            document.getElementById('mdesc'+i).innerHTML=data[i].mdesc;
+            document.getElementById('mprice'+i).innerHTML=data[i].mprice;
+        }
+    }
+    
+    xhttp.send();
+</script>
+</html>
